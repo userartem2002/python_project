@@ -12,7 +12,7 @@ services:
       - '5432:5432'
   web:
     container_name: pythonproj
-    image: userartem2020/python_project123:v1
+    image: userartem2020/python_project123:latest
     build:
       context: .
       dockerfile: Dockerfile
