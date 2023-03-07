@@ -13,6 +13,6 @@ WORKDIR /home/test/PycharmProjects/pythonProject123/mysite
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-RUN flake8 --exit-zero mysite/proj/views.py && bandit --exit-zero mysite/proj/views.py
+RUN flake8 mysite/proj/views.py && bandit mysite/proj/views.py
 
 CMD python mysite/manage.py runserver
