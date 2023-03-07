@@ -2,12 +2,8 @@ from django.test import TestCase
 from proj.models import Student
 from proj.views import plswork, mygod, mygodtwo
 
-class StudentModelTest(TestCase):
 
-    @classmethod
-    def setUpTestData(cls):
-        # Set up non-modified objects used by all test methods
-        Student.objects.create(name='Fedor', surname='Ivanov', group='201-331')
+class StudentModelTest(TestCase):
 
     def test_name_label(self):
         student = Student.objects.get(id=1)
