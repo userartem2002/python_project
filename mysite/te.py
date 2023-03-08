@@ -13,7 +13,7 @@ class StudentModelTest(TestCase):
     def test_name_label(self):
         student = Student.objects.get(id=1)
         field_label = student._meta.get_field('name').verbose_name
-        self.assertEqual(field_label, 'surname')
+        self.assertEqual(field_label, 'name')
         print("OK - test_name_label")
 
     def test_surname_label(self):
