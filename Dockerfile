@@ -8,11 +8,9 @@ WORKDIR /home/test/PycharmProjects/pythonProject123/mysite
 
 
 RUN pip install --upgrade pip
-#RUN pip install gunicorn
-#RUN apt-get install python-dev libxml2-dev libxslt-dev libpq-dev gcc
-
 RUN pip install -r requirements.txt
 
-RUN python -m pip install django
+RUN flake8 --exit-zero mysite/proj/views.py && bandit --exit-zero mysite/proj/views.py
+RUN python mysite/te.py
 
 CMD python mysite/manage.py runserver
