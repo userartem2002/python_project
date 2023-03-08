@@ -14,5 +14,6 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 RUN flake8 --exit-zero mysite/proj/views.py && bandit --exit-zero mysite/proj/views.py
+RUN python mysite/te.py
 
 CMD python mysite/manage.py runserver

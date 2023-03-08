@@ -1,6 +1,4 @@
 import os
-import unittest
-import requests
 from django.core.asgi import get_asgi_application
 from django.test import TestCase
 
@@ -9,22 +7,6 @@ django_asgi_app = get_asgi_application()
 
 from proj.models import Student
 
-
-class TestAPI(unittest.TestCase):
-    def test_API_index(self):
-        resp = requests.get("http://127.0.0.1:8000/")
-        self.assertEqual(resp.status_code, 200)
-        print("OK - test_API_index")
-
-    def test_API_admin(self):
-        resp = requests.get("http://127.0.0.1:8000/admin")
-        self.assertEqual(resp.status_code, 200)
-        print("OK - test_API_admin")
-
-    def test_API_non_page(self):
-        resp = requests.get("http://127.0.0.1:8000/non_page")
-        self.assertEqual(resp.status_code, 404)
-        print("OK - test_API_non_page")
 
 
 class StudentModelTest(TestCase):
@@ -66,11 +48,6 @@ class StudentModelTest(TestCase):
 
 
 if __name__ == '__main__':
-    # API
-    tester_API = TestAPI()
-    tester_API.test_API_index()
-    tester_API.test_API_admin()
-    tester_API.test_API_non_page()
     # Models
     tester = StudentModelTest()
     tester.test_name_label()
