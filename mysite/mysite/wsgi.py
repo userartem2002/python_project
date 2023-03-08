@@ -12,6 +12,7 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
 
+
 # import os
 # import sys
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

@@ -30,14 +30,16 @@ ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
 # Application definition
 
+
+
 INSTALLED_APPS = [
+    'proj.apps.HomeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'proj'
 ]
 
 MIDDLEWARE = [
@@ -83,6 +85,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation
